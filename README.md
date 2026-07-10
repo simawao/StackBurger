@@ -274,8 +274,8 @@ Bu proje eğitim ve portföy amaçlı geliştirilmiştir. Gerçek bir restoran y
 
 # 👩‍💻 Geliştirici
 
-**Simanur Gürsoy**
+**Sima Gürsoy**
 
-Bilgisayar / Yazılım Mühendisliği Öğrencisi
+ Yazılım Mühendisliği Öğrencisi
 
 GitHub: https://github.com/simawao
