@@ -1,29 +1,37 @@
 # 🍔 Stack Burger Yönetim Sistemi
 
-Stack Burger, müşteri, mutfak personeli ve yönetici için geliştirilmiş dinamik bir restoran yönetim sistemidir. Proje; sipariş oluşturma, sipariş takibi, menü yönetimi, mutfak operasyonu ve raporlama süreçlerini tek bir platformda birleştirerek restoran iş akışını dijital ortama taşımayı amaçlamaktadır.
+Stack Burger, müşteri, mutfak personeli ve yönetici rollerini tek bir platformda buluşturan dinamik bir restoran yönetim sistemi projesidir.
+
+Proje; sipariş oluşturma, sipariş takibi, mutfak yönetimi, menü yönetimi, raporlama ve iletişim süreçlerini dijital ortama taşıyarak restoran operasyonlarını daha verimli hale getirmeyi amaçlamaktadır.
 
 ---
 
 # 📖 Proje Hakkında
 
-Bu proje, restoran işletmelerinde sipariş süreçlerini daha hızlı, düzenli ve yönetilebilir hale getirmek amacıyla geliştirilmiştir.
+Stack Burger, restoran işletmelerinde sipariş süreçlerini dijitalleştirmek amacıyla geliştirilmiş tam kapsamlı bir web uygulamasıdır.
 
-Sistem; müşterilerin sipariş oluşturmasını, mutfak personelinin siparişleri yönetmesini ve yöneticinin menü ile raporlama işlemlerini tek bir platform üzerinden gerçekleştirmesini sağlar.
+Sistem üç farklı kullanıcı rolünden oluşmaktadır:
+
+- 👤 Müşteri
+- 👨‍🍳 Mutfak Personeli
+- 👨‍💼 Yönetici
+
+Her kullanıcı yalnızca kendi yetkilerine ait ekranlara erişebilir.
 
 Veriler MySQL veritabanında saklanmakta olup PHP ile dinamik olarak yönetilmektedir.
 
 ---
 
-# 🚀 Özellikler
+# ✨ Özellikler
 
 ## 👤 Müşteri
 
 - Ana sayfa
 - Canlı menü görüntüleme
 - Sipariş oluşturma
-- Sipariş takibi
+- Sipariş durumu takibi
 - Hakkımızda sayfası
-- Konum bilgisi
+- Konum sayfası
 - İletişim formu
 
 ---
@@ -46,11 +54,11 @@ Veriler MySQL veritabanında saklanmakta olup PHP ile dinamik olarak yönetilmek
 - Ürün düzenleme
 - Satış raporları
 - Günlük ciro takibi
-- Gelen mesajları görüntüleme
+- Gelen müşteri mesajlarını görüntüleme
 
 ---
 
-# 💻 Kullanılan Teknolojiler
+# 🛠 Kullanılan Teknolojiler
 
 ## Front-End
 
@@ -83,14 +91,17 @@ StackBurger
 ├── api.php
 ├── db.php
 ├── schema.sql
-├── styles.css
 ├── app.js
+├── styles.css
 │
 ├── index.html
 ├── menu.html
 ├── order.html
 ├── order-status.html
 ├── login.html
+├── about.html
+├── contact.html
+├── location.html
 │
 ├── dashboard.html
 ├── kitchen-dashboard.html
@@ -102,22 +113,20 @@ StackBurger
 ├── manager-reports.html
 ├── manager-messages.html
 │
-├── about.html
-├── contact.html
-└── location.html
+└── README.md
 ```
 
 ---
 
 # 🗄️ Veritabanı
 
-Kullanılan veritabanı:
+Proje aşağıdaki MySQL veritabanını kullanmaktadır.
 
 ```
 stack_burger
 ```
 
-Oluşturulan tablolar:
+Tablolar:
 
 - users
 - menu_categories
@@ -133,55 +142,111 @@ Oluşturulan tablolar:
 ## 1. Depoyu Klonlayın
 
 ```bash
-git clone https://github.com/kullaniciadi/StackBurger.git
+git clone https://github.com/simawao/StackBurger.git
+```
+
+veya projeyi ZIP olarak indiriniz.
+
+---
+
+## 2. XAMPP Kurulumu
+
+Bilgisayarınıza XAMPP kurunuz.
+
+Ardından aşağıdaki servisleri çalıştırınız.
+
+- Apache
+- MySQL
+
+---
+
+## 3. Projeyi htdocs Klasörüne Taşıyın
+
+### Windows
+
+```
+C:\xampp\htdocs\StackBurger
+```
+
+### macOS
+
+```
+/Applications/XAMPP/xamppfiles/htdocs/StackBurger
 ```
 
 ---
 
-## 2. Projeyi XAMPP içerisine taşıyın
+## 4. phpMyAdmin'i Açın
+
+Tarayıcıdan;
 
 ```
-xamppfiles/htdocs/
+http://localhost/phpmyadmin
 ```
 
-klasörüne kopyalayın.
+adresine gidiniz.
 
 ---
 
-## 3. Veritabanını oluşturun
+## 5. Veritabanını Oluşturun
 
-phpMyAdmin üzerinden
+Yeni bir veritabanı oluşturunuz.
+
+Veritabanı adı:
 
 ```
 stack_burger
 ```
 
-isimli veritabanını oluşturun.
+Karşılaştırma (Collation):
+
+```
+utf8mb4_general_ci
+```
 
 ---
 
-## 4. SQL dosyasını içe aktarın
+## 6. SQL Dosyasını İçe Aktarın
+
+Yeni oluşturduğunuz **stack_burger** veritabanını seçiniz.
+
+Üst menüden;
+
+```
+İçe Aktar (Import)
+```
+
+sekmesine tıklayınız.
+
+Proje içerisindeki
 
 ```
 schema.sql
 ```
 
-dosyasını phpMyAdmin üzerinden içe aktarın.
+dosyasını seçerek içe aktarınız.
 
 ---
 
-## 5. Apache ve MySQL servislerini başlatın
+## 7. Veritabanı Bağlantısını Kontrol Edin
 
-XAMPP üzerinden;
+`db.php` dosyasındaki bağlantı bilgileri aşağıdaki şekilde olmalıdır.
 
-- Apache
-- MySQL
+```
+Host      : localhost
+Database  : stack_burger
+Username  : root
+Password  :
+Charset   : utf8mb4
+```
 
-servislerini çalıştırın.
+Şifre kullanıyorsanız kendi MySQL şifrenizi giriniz.
 
 ---
 
-## 6. Projeyi çalıştırın
+## 8. Projeyi Çalıştırın
+
+Tarayıcıdan aşağıdaki adresi açınız.
 
 ```
 http://localhost/StackBurger/
@@ -191,35 +256,37 @@ http://localhost/StackBurger/
 
 # 👥 Kullanıcı Rolleri
 
-## Müşteri
+## 👤 Müşteri
 
-- Sipariş oluşturabilir.
-- Sipariş durumunu takip edebilir.
-- Menü görüntüleyebilir.
-- İletişim formu gönderebilir.
-
----
-
-## Mutfak Personeli
-
-- Gelen siparişleri görüntüler.
-- Sipariş durumlarını günceller.
-- Hazırlık sürecini yönetir.
+- Menü görüntüleyebilir
+- Sipariş oluşturabilir
+- Sipariş durumunu takip edebilir
+- İletişim formu gönderebilir
 
 ---
 
-## Yönetici
+## 👨‍🍳 Mutfak Personeli
 
-- Menü yönetimi
-- Ürün ekleme
-- Ürün düzenleme
-- Satış raporları
-- Ciro takibi
-- Gelen mesajları görüntüleme
+- Gelen siparişleri görüntüler
+- Sipariş durumlarını günceller
+- Aktif siparişleri yönetir
+- Bildirimleri takip eder
 
 ---
 
-# 🔄 Sistem İşleyişi
+## 👨‍💼 Yönetici
+
+- Dashboard görüntüler
+- Menü yönetimini yapar
+- Yeni ürün ekler
+- Ürün düzenler
+- Satış raporlarını görüntüler
+- Günlük ciroyu takip eder
+- Gelen müşteri mesajlarını yönetir
+
+---
+
+# 🔄 Sistem Akışı
 
 ```
 Müşteri
@@ -246,29 +313,35 @@ Sipariş Tamamlanır
 
 ↓
 
-Müşteri Siparişi Takip Eder
+Müşteri Sipariş Durumunu Görür
 
 ↓
 
-Yönetici Raporlarında Görüntülenir
+Yönetici Paneli
+
+↓
+
+Raporlar ve İstatistikler
 ```
 
 ---
 
 # 🎯 Proje Amaçları
 
-- Restoran yönetimini dijitalleştirmek
+- Restoran yönetimini dijital ortama taşımak
 - Sipariş süreçlerini hızlandırmak
 - Menü yönetimini kolaylaştırmak
-- Rol tabanlı kullanıcı sistemi oluşturmak
-- Veritabanı destekli dinamik bir web uygulaması geliştirmek
-- Kullanıcı dostu ve modern bir arayüz sunmak
+- Rol tabanlı kullanıcı sistemi geliştirmek
+- Veritabanı destekli dinamik web uygulaması oluşturmak
+- Kullanıcı dostu modern bir arayüz sunmak
 
 ---
 
 # 📌 Not
 
-Bu proje eğitim ve portföy amaçlı geliştirilmiştir. Gerçek bir restoran yönetim sisteminin temel işleyişini simüle etmekte olup müşteri, mutfak ve yönetici süreçlerini dinamik olarak yönetebilmektedir.
+Bu proje eğitim ve portföy amacıyla geliştirilmiştir.
+
+Projede PHP ve MySQL kullanılarak dinamik bir restoran yönetim sistemi geliştirilmiş olup müşteri, mutfak ve yönetici süreçleri gerçek iş akışına uygun şekilde tasarlanmıştır.
 
 ---
 
@@ -276,6 +349,6 @@ Bu proje eğitim ve portföy amaçlı geliştirilmiştir. Gerçek bir restoran y
 
 **Sima Gürsoy**
 
- Yazılım Mühendisliği Öğrencisi
+Yazılım Mühendisliği Öğrencisi
 
 GitHub: https://github.com/simawao
