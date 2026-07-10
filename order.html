@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sipariş Oluştur · Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand-link" href="index.html">
+        <p class="eyebrow">Stack Burger</p>
+        <h1>Stack Burger</h1>
+      </a>
+      <nav class="role-nav" aria-label="Ana menü">
+        <a class="role-button" href="index.html">Ana Sayfa</a>
+        <a class="role-button" href="menu.html">Menü</a>
+        <a class="role-button is-active" href="order.html">Sipariş Oluştur</a>
+        <a class="role-button" href="order-status.html">Sipariş Takip</a>
+        <a class="role-button" href="about.html">Hakkımızda</a>
+        <a class="role-button" href="location.html">Konum</a>
+        <a class="role-button" href="contact.html">İletişim</a>
+        <a class="role-button login-nav-button" href="login.html">Giriş Yap</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="customer-order page-section" aria-labelledby="order-title">
+        <div class="order-intro">
+          <p class="eyebrow">Hesapsız Sipariş</p>
+          <h2 id="order-title">Siparişini oluştur, mutfağa direkt düşsün.</h2>
+          <p>Müşteri hesabı açmana gerek yok. Ürünleri seç ve siparişini gönder; mutfak ekranına anında fiş olarak düşsün.</p>
+        </div>
+
+        <div class="order-layout">
+          <section class="panel">
+            <div class="panel-heading">
+              <h2>Menüden Seç</h2>
+              <span>Ürüne tıklayarak ekle</span>
+            </div>
+            <div class="category-tabs" id="customer-category-tabs"></div>
+            <div class="menu-grid" id="customer-menu-grid"></div>
+          </section>
+
+          <aside class="panel order-cart" aria-labelledby="cart-title">
+            <div class="panel-heading">
+              <h2 id="cart-title">Sipariş Özeti</h2>
+              <span id="customer-cart-count">0 ürün</span>
+            </div>
+            <label class="order-field">
+              Masa Numarası
+              <select id="customer-table" name="table">
+                <option value="Masa 1">Masa 1</option>
+                <option value="Masa 2">Masa 2</option>
+                <option value="Masa 3">Masa 3</option>
+                <option value="Masa 4">Masa 4</option>
+              </select>
+            </label>
+            <label class="order-field">
+              İçecek Notu
+              <textarea id="customer-drink-note" name="drink-note" rows="3" maxlength="140" placeholder="Örn. kola şekersiz, soğuk çay şeftali, buzsuz olsun"></textarea>
+            </label>
+            <div class="check-list" id="customer-cart-list"></div>
+            <div class="totals">
+              <div>
+                <span>Toplam</span>
+                <strong id="customer-cart-total">₺0</strong>
+              </div>
+            </div>
+            <button class="primary-button" id="customer-submit-order">Siparişi Mutfağa Gönder</button>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Sipariş Oluştur</span>
+      <span>Hesap açmadan mutfağa canlı sipariş.</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

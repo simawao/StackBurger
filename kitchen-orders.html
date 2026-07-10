@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aktif Siparişler · Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="panel-body">
+    <div class="panel-shell" data-required-role="kitchen">
+      <aside class="panel-sidebar" aria-label="Mutfak menüsü">
+        <a class="panel-brand" href="kitchen-dashboard.html">
+          <img src="assets/stack-logo.png" alt="Stack Burger">
+          <strong>Stack Burger</strong>
+        </a>
+        <nav class="panel-menu" aria-label="Mutfak panel menüsü">
+          <div class="panel-nav-card">
+            <p>Mutfak Paneli</p>
+            <a class="panel-menu-item" href="kitchen-dashboard.html">Dashboard</a>
+            <a class="panel-menu-item" href="kitchen-notifications.html">Bildirimler</a>
+            <a class="panel-menu-item is-active" href="kitchen-orders.html">Aktif Siparişler</a>
+          </div>
+        </nav>
+        <div class="panel-user" data-panel-session>Oturum kontrol ediliyor</div>
+        <button class="panel-logout" type="button" data-logout>Çıkış Yap</button>
+      </aside>
+
+      <main class="panel-main">
+        <section class="panel-hero-card panel-view-hero">
+          <div>
+            <p class="eyebrow">Mutfak Paneli</p>
+            <h1>Aktif Siparişler</h1>
+            <p>Bekleyen ve hazırlanan fişleri bu sayfadan ilerletin.</p>
+          </div>
+          <span class="panel-pill" id="kitchen-count">0 fiş</span>
+        </section>
+        <section class="panel-card">
+          <div class="panel-card-heading">
+            <div>
+              <h2>Mutfak Sipariş Kuyruğu</h2>
+              <p>Hazırla ve tamamla işlemleri.</p>
+            </div>
+          </div>
+          <div class="ticket-board" id="ticket-board"></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

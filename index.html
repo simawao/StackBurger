@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand-link" href="index.html">
+        <p class="eyebrow">Stack Burger</p>
+        <h1>Stack Burger</h1>
+      </a>
+      <nav class="role-nav" aria-label="Ana menü">
+        <a class="role-button is-active" href="index.html">Ana Sayfa</a>
+        <a class="role-button" href="menu.html">Menü</a>
+        <a class="role-button" href="order.html">Sipariş Oluştur</a>
+        <a class="role-button" href="order-status.html">Sipariş Takip</a>
+        <a class="role-button" href="about.html">Hakkımızda</a>
+        <a class="role-button" href="location.html">Konum</a>
+        <a class="role-button" href="contact.html">İletişim</a>
+        <a class="role-button login-nav-button" href="login.html">Giriş Yap</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-section" aria-labelledby="home-title">
+        <div class="home-hero">
+          <div class="home-logo-wrap">
+            <img src="assets/stack-logo.png" alt="Stack Burger logosu" class="home-logo">
+          </div>
+          <div class="home-copy">
+            <p class="eyebrow">Moda / Kadıköy</p>
+            <h2 id="home-title">Smash burger, çıtır yan ürünler ve sıcak bir dükkân hissi.</h2>
+            <p>Stack Burger; sade menüsü, imza sosları ve retro lacivert-krem dünyasıyla hızlı ama özenli bir burger deneyimi sunar.</p>
+            <div class="home-actions">
+              <a class="primary-button home-action" href="menu.html">Menüyü Gör</a>
+              <a class="secondary-button home-action" href="login.html">Personel Girişi</a>
+            </div>
+          </div>
+        </div>
+        <section class="mission-section" aria-label="Misyon ve vizyon">
+          <div class="mission-copy">
+            <article>
+              <span>Misyon</span>
+              <h2>Hızlı servisi, taze hazırlık ve sıcak dükkân hissiyle birleştirmek.</h2>
+              <p>Her siparişte sade, anlaşılır ve güven veren bir burger deneyimi sunmayı hedefliyoruz.</p>
+            </article>
+            <article>
+              <span>Vizyon</span>
+              <h2>Mahalle burgerini dijital operasyonla daha akıcı hale getirmek.</h2>
+              <p>Menüden mutfağa, kasadan rapora kadar düzenli çalışan bir Stack Burger ritmi kuruyoruz.</p>
+            </article>
+          </div>
+          <div class="feature-visual" aria-label="Stack Burger atmosfer görseli">
+            <div class="feature-card">
+              <img src="assets/stack-logo.png" alt="Stack Burger karakter illüstrasyonu">
+              <div>
+                <span>Signature</span>
+                <strong>Classic Smash</strong>
+                <small>Cheddar · turşu · özel sos</small>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-story-band" aria-label="Stack Burger deneyimi">
+          <article>
+            <span>01</span>
+            <strong>Masadan direkt mutfağa</strong>
+            <p>Müşteri siparişi masa numarasıyla alınır, mutfak ekranında canlı fişe dönüşür.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Smash ritmi</strong>
+            <p>Yüksek ateş, çıtır kenar, eriyen cheddar ve sade ama güçlü sos dengesi.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>Kadıköy enerjisi</strong>
+            <p>Retro renkler, hızlı servis ve Moda sokaklarına yakışan sıcak dükkân hissi.</p>
+          </article>
+        </section>
+        <section class="panel home-menu-panel" aria-labelledby="home-favorites-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Favoriler</p>
+              <h2 id="home-favorites-title">Bugün ne yesek?</h2>
+            </div>
+            <a class="secondary-button home-action" href="order.html">Sipariş Oluştur</a>
+          </div>
+          <div class="favorite-grid">
+            <article>
+              <span>Signature</span>
+              <strong>Classic Smash</strong>
+              <p>Çift köfte, cheddar, turşu ve Stack sos.</p>
+            </article>
+            <article>
+              <span>Çıtır</span>
+              <strong>Trüflü Patates</strong>
+              <p>Parmesan, trüf aroması ve sıcak servis.</p>
+            </article>
+            <article>
+              <span>Set</span>
+              <strong>Klasik Set</strong>
+              <p>Burger, patates ve içecekle tam masa keyfi.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Stack Burger</span>
+      <span>Smash, sos ve hızlı servis.</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

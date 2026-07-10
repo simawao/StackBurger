@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panel · Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="panel-body" data-redirect-role-home="true">
+    <div class="panel-shell">
+      <aside class="panel-sidebar" aria-label="Panel menüsü">
+        <a class="panel-brand" href="dashboard.html">
+          <img src="assets/stack-logo.png" alt="Stack Burger">
+          <strong>Stack Burger</strong>
+        </a>
+        <div class="panel-user" data-panel-session>Oturum kontrol ediliyor</div>
+        <button class="panel-logout" type="button" data-logout>Çıkış Yap</button>
+      </aside>
+
+      <main class="panel-main">
+        <section class="panel-hero-card">
+          <div>
+            <p class="eyebrow">Panel</p>
+            <h1>Yönlendiriliyor</h1>
+            <p>Giriş yaptığınız role ait dashboard sayfası açılıyor.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

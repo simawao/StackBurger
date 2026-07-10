@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sipariş Takip · Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand-link" href="index.html">
+        <p class="eyebrow">Stack Burger</p>
+        <h1>Stack Burger</h1>
+      </a>
+      <nav class="role-nav" aria-label="Ana menü">
+        <a class="role-button" href="index.html">Ana Sayfa</a>
+        <a class="role-button" href="menu.html">Menü</a>
+        <a class="role-button" href="order.html">Sipariş Oluştur</a>
+        <a class="role-button is-active" href="order-status.html">Sipariş Takip</a>
+        <a class="role-button" href="about.html">Hakkımızda</a>
+        <a class="role-button" href="location.html">Konum</a>
+        <a class="role-button" href="contact.html">İletişim</a>
+        <a class="role-button login-nav-button" href="login.html">Giriş Yap</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-section order-status-page" aria-labelledby="order-status-title">
+        <div class="order-intro">
+          <p class="eyebrow">Masa Ekranı</p>
+          <h2 id="order-status-title">Sipariş durumunu buradan takip et.</h2>
+          <p>Giriş yapmana gerek yok. Masanı seç; mutfak siparişi hazırladıkça durum burada güncellenir.</p>
+        </div>
+
+        <div class="status-layout">
+          <section class="panel status-control-panel">
+            <label class="order-field">
+              Masa Numarası
+              <select id="status-table" name="table"></select>
+            </label>
+            <a class="secondary-button" href="order.html">Yeni Sipariş Oluştur</a>
+          </section>
+
+          <section class="panel status-feed-panel" aria-labelledby="status-feed-title">
+            <div class="panel-heading">
+              <div>
+                <h2 id="status-feed-title">Aktif Siparişler</h2>
+                <span id="status-table-label">Masa seçiliyor</span>
+              </div>
+            </div>
+            <div class="status-list" id="order-status-list"></div>
+          </section>
+
+          <section class="panel status-feed-panel status-history-panel" aria-labelledby="status-history-title">
+            <div class="panel-heading">
+              <div>
+                <h2 id="status-history-title">Geçmiş Siparişler</h2>
+                <span>Hazır olduktan 1 dakika sonra buraya düşer</span>
+              </div>
+              <button class="ghost-button" type="button" id="toggle-history-button" aria-expanded="false">Geçmiş Siparişleri Göster</button>
+            </div>
+            <div class="status-list" id="order-history-list" hidden></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Sipariş Takip</span>
+      <span>Mutfak durumu masa ekranına canlı yansır.</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

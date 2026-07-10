@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yönetici Raporları · Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="panel-body">
+    <div class="panel-shell" data-required-role="manager">
+      <aside class="panel-sidebar" aria-label="Yönetici menüsü">
+        <a class="panel-brand" href="manager-dashboard.html">
+          <img src="assets/stack-logo.png" alt="Stack Burger">
+          <strong>Stack Burger</strong>
+        </a>
+        <nav class="panel-menu" aria-label="Yönetici panel menüsü">
+          <div class="panel-nav-card">
+            <p>Yönetici Paneli</p>
+            <a class="panel-menu-item" href="manager-dashboard.html">Dashboard</a>
+            <a class="panel-menu-item is-active" href="manager-reports.html">Raporlar</a>
+            <a class="panel-menu-item" href="manager-menu.html">Menü Yönetimi</a>
+            <a class="panel-menu-item" href="manager-messages.html">Mesajlar</a>
+          </div>
+        </nav>
+        <div class="panel-user" data-panel-session>Oturum kontrol ediliyor</div>
+        <button class="panel-logout" type="button" data-logout>Çıkış Yap</button>
+      </aside>
+
+      <main class="panel-main">
+        <section class="panel-hero-card panel-view-hero">
+          <div>
+            <p class="eyebrow">Yönetici Paneli</p>
+            <h1>Raporlar</h1>
+            <p>Ürün bazlı satış ve ciro takibi bu sayfada görünür.</p>
+          </div>
+          <span class="panel-pill" id="report-updated">Güncel</span>
+        </section>
+        <section class="panel-card report-panel">
+          <div class="panel-card-heading">
+            <h2>Ürün Bazlı Satış</h2>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ürün</th>
+                  <th>Kategori</th>
+                  <th>Adet</th>
+                  <th>Ciro</th>
+                </tr>
+              </thead>
+              <tbody id="sales-table"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

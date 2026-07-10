@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>İletişim · Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand-link" href="index.html">
+        <p class="eyebrow">Stack Burger</p>
+        <h1>Stack Burger</h1>
+      </a>
+      <nav class="role-nav" aria-label="Ana menü">
+        <a class="role-button" href="index.html">Ana Sayfa</a>
+        <a class="role-button" href="menu.html">Menü</a>
+        <a class="role-button" href="order.html">Sipariş Oluştur</a>
+        <a class="role-button" href="order-status.html">Sipariş Takip</a>
+        <a class="role-button" href="about.html">Hakkımızda</a>
+        <a class="role-button" href="location.html">Konum</a>
+        <a class="role-button is-active" href="contact.html">İletişim</a>
+        <a class="role-button login-nav-button" href="login.html">Giriş Yap</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel contact-panel page-section" aria-labelledby="contact-title">
+        <div class="contact-hero">
+          <div>
+            <p class="eyebrow">İletişim</p>
+            <h2 id="contact-title">Bize Ulaş</h2>
+            <p>Rezervasyon, toplu sipariş, menü önerisi veya operasyonla ilgili notlar için buradayız.</p>
+          </div>
+          <strong>Moda / Kadıköy</strong>
+        </div>
+        <div class="contact-layout">
+          <dl class="contact-list">
+            <div>
+              <dt>Telefon</dt>
+              <dd>+90 216 000 24 24</dd>
+            </div>
+            <div>
+              <dt>E-posta</dt>
+              <dd>hello@stackburger.local</dd>
+            </div>
+            <div>
+              <dt>Çalışma Saatleri</dt>
+              <dd>Her gün 11:00 - 23:30</dd>
+            </div>
+            <div>
+              <dt>Sosyal</dt>
+              <dd>@stackburger.kadikoy</dd>
+            </div>
+          </dl>
+          <form class="contact-form" id="contact-form">
+            <div class="form-note">
+              İletişim bilgilerinizi bırakın, ekibimiz en kısa sürede sizi arasın.
+            </div>
+            <label>
+              Ad Soyad
+              <input id="contact-name" name="name" type="text" placeholder="Adınız" required>
+            </label>
+            <label>
+              E-posta
+              <input id="contact-email" name="email" type="email" placeholder="ornek@mail.com" required>
+            </label>
+            <label class="editor-wide">
+              Mesaj
+              <textarea id="contact-message" name="message" rows="4" placeholder="Mesajınızı yazın" required></textarea>
+            </label>
+            <button class="primary-button" type="submit">Mesaj Gönder</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Stack Burger</span>
+      <span>Her gün 11:00 - 23:30.</span>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

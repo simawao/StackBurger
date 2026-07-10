@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giriş Yap · Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand-link" href="index.html">
+        <p class="eyebrow">Stack Burger</p>
+        <h1>Stack Burger</h1>
+      </a>
+      <nav class="role-nav" aria-label="Ana menü">
+        <a class="role-button" href="index.html">Ana Sayfa</a>
+        <a class="role-button" href="menu.html">Menü</a>
+        <a class="role-button" href="order.html">Sipariş Oluştur</a>
+        <a class="role-button" href="order-status.html">Sipariş Takip</a>
+        <a class="role-button" href="about.html">Hakkımızda</a>
+        <a class="role-button" href="location.html">Konum</a>
+        <a class="role-button" href="contact.html">İletişim</a>
+        <a class="role-button login-nav-button is-active" href="login.html">Giriş Yap</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="login-page page-section" aria-labelledby="demo-login-title">
+        <div class="login-card">
+          <p class="eyebrow">Stack Burger</p>
+          <h2 id="demo-login-title">Giriş Yap</h2>
+          <p class="login-helper">Personel hesabınızla sisteme giriş yapabilirsiniz.</p>
+
+          <form class="login-form" id="staff-login-form">
+            <label>
+              Kullanıcı Türü
+              <select id="staff-role" name="role">
+                <option value="kitchen">Mutfak</option>
+                <option value="manager">Yönetici</option>
+              </select>
+            </label>
+            <label>
+              E-Posta
+              <input id="staff-email" name="email" type="email" placeholder="E-posta adresiniz">
+            </label>
+            <label>
+              Şifre
+              <input id="staff-password" name="password" type="password" placeholder="Şifreniz">
+            </label>
+            <div class="login-row">
+              <label class="remember-row">
+                <input type="checkbox" name="remember">
+                Beni Hatırla
+              </label>
+              <span>Personel hesabı</span>
+            </div>
+            <button class="primary-button login-submit" type="submit">Giriş Yap</button>
+          </form>
+
+          <div class="demo-account-grid login-demo-grid" id="demo-account-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Personel Girişi</span>
+      <span>Demo roller operasyon paneline yönlendirir.</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

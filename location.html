@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Konum · Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand-link" href="index.html">
+        <p class="eyebrow">Stack Burger</p>
+        <h1>Stack Burger</h1>
+      </a>
+      <nav class="role-nav" aria-label="Ana menü">
+        <a class="role-button" href="index.html">Ana Sayfa</a>
+        <a class="role-button" href="menu.html">Menü</a>
+        <a class="role-button" href="order.html">Sipariş Oluştur</a>
+        <a class="role-button" href="order-status.html">Sipariş Takip</a>
+        <a class="role-button" href="about.html">Hakkımızda</a>
+        <a class="role-button is-active" href="location.html">Konum</a>
+        <a class="role-button" href="contact.html">İletişim</a>
+        <a class="role-button login-nav-button" href="login.html">Giriş Yap</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel location-panel page-section" aria-labelledby="location-title">
+        <div class="location-copy">
+          <p class="eyebrow">Konum</p>
+          <h2 id="location-title">Stack Burger Kadıköy</h2>
+          <p>Caferağa Mahallesi, Moda Caddesi No: 24, Kadıköy / İstanbul</p>
+        </div>
+        <div class="location-layout">
+          <div class="map-card real-map" aria-label="Stack Burger haritası">
+            <iframe
+              title="Stack Burger Kadıköy haritası"
+              src="https://www.google.com/maps?q=Moda%20Caddesi%20Kad%C4%B1k%C3%B6y%20%C4%B0stanbul&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="location-details">
+            <article>
+              <span>Adres</span>
+              <strong>Moda Caddesi No: 24</strong>
+              <p>Caferağa Mahallesi, Kadıköy / İstanbul</p>
+            </article>
+            <article>
+              <span>Yakın Noktalar</span>
+              <strong>Kadıköy Sahil yürüyüşüne 5 dk</strong>
+              <p>Moda tramvay hattı ve Kadıköy merkez aksına yakın.</p>
+            </article>
+            <article>
+              <span>Saatler</span>
+              <strong>Her gün 11:00 - 23:30</strong>
+              <p>Öğle servisi, akşam yoğunluğu ve paket sipariş akışı.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Moda / Kadıköy</span>
+      <span>Kadıköy Sahil yürüyüşüne 5 dk.</span>
+    </footer>
+  </body>
+</html>

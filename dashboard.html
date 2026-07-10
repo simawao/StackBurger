@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard · Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="panel-body">
+    <div class="panel-shell">
+      <aside class="panel-sidebar" aria-label="Panel menüsü">
+        <a class="panel-brand" href="dashboard.html">
+          <img src="assets/stack-logo.png" alt="Stack Burger">
+          <strong>Stack Burger</strong>
+        </a>
+
+        <nav class="panel-menu" aria-label="Panel içi menü">
+          <div class="panel-nav-card" data-panel-role="kitchen">
+            <p>Mutfak Paneli</p>
+            <a class="panel-menu-item is-active" href="dashboard.html">Dashboard</a>
+            <a class="panel-menu-item" href="kitchen-notifications.html">Bildirimler</a>
+            <a class="panel-menu-item" href="kitchen-orders.html">Aktif Siparişler</a>
+          </div>
+
+          <div class="panel-nav-card" data-panel-role="manager">
+            <p>Yönetici Paneli</p>
+            <a class="panel-menu-item is-active" href="dashboard.html">Dashboard</a>
+            <a class="panel-menu-item" href="manager-reports.html">Raporlar</a>
+            <a class="panel-menu-item" href="manager-menu.html">Menü Yönetimi</a>
+            <a class="panel-menu-item" href="manager-messages.html">Mesajlar</a>
+          </div>
+        </nav>
+
+        <div class="panel-user" data-panel-session>Oturum kontrol ediliyor</div>
+        <button class="panel-logout" type="button" data-logout>Çıkış Yap</button>
+      </aside>
+
+      <main class="panel-main">
+        <section class="panel-hero-card" aria-labelledby="dashboard-title">
+          <div>
+            <p class="eyebrow" id="dashboard-eyebrow">Rol Dashboard</p>
+            <h1 id="dashboard-title">Stack Burger Paneli</h1>
+            <p id="dashboard-copy">Her personel sadece kendi dashboard alanını ve kendi işlem ekranını görür.</p>
+          </div>
+          <span class="panel-pill" id="dashboard-session">Aktif oturum</span>
+        </section>
+
+        <section class="panel-stats" aria-label="Mutfak panel özeti" data-panel-role="kitchen">
+          <article class="panel-stat-card">
+            <span>Aktif Sipariş</span>
+            <strong id="dashboard-active-orders">0</strong>
+          </article>
+          <article class="panel-stat-card">
+            <span>Yeni Bildirim</span>
+            <strong id="dashboard-unread-orders">0</strong>
+          </article>
+          <article class="panel-stat-card">
+            <span>Tamamlanan Fiş</span>
+            <strong id="dashboard-kitchen-archive">0</strong>
+          </article>
+        </section>
+
+        <section class="panel-stats" aria-label="Yönetici panel özeti" data-panel-role="manager">
+          <article class="panel-stat-card">
+            <span>Günlük Ciro</span>
+            <strong id="dashboard-revenue">₺0</strong>
+          </article>
+          <article class="panel-stat-card">
+            <span>Arşivlenen Sipariş</span>
+            <strong id="dashboard-manager-archive">0</strong>
+          </article>
+          <article class="panel-stat-card">
+            <span>Menü Ürünü</span>
+            <strong id="dashboard-menu-count">0</strong>
+          </article>
+        </section>
+
+        <section class="panel-card" aria-labelledby="quick-actions-title">
+          <div class="panel-card-heading">
+            <div>
+              <h2 id="quick-actions-title">Devam Et</h2>
+              <p>Yan menüdeki tüm bölümler açık görünüyor; buradan doğrudan ana işlem alanına geçebilirsiniz.</p>
+            </div>
+          </div>
+          <div class="panel-action-grid">
+            <a class="panel-action-button" href="kitchen-dashboard.html" data-panel-role="kitchen">Mutfak Ekranına Geç</a>
+            <a class="panel-action-button" href="manager-dashboard.html" data-panel-role="manager">Yönetici Ekranına Geç</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

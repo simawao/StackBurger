@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menü Yönetimi · Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="panel-body">
+    <div class="panel-shell" data-required-role="manager">
+      <aside class="panel-sidebar" aria-label="Yönetici menüsü">
+        <a class="panel-brand" href="manager-dashboard.html">
+          <img src="assets/stack-logo.png" alt="Stack Burger">
+          <strong>Stack Burger</strong>
+        </a>
+        <nav class="panel-menu" aria-label="Yönetici panel menüsü">
+          <div class="panel-nav-card">
+            <p>Yönetici Paneli</p>
+            <a class="panel-menu-item" href="manager-dashboard.html">Dashboard</a>
+            <a class="panel-menu-item" href="manager-reports.html">Raporlar</a>
+            <a class="panel-menu-item is-active" href="manager-menu.html">Menü Yönetimi</a>
+            <a class="panel-menu-item" href="manager-messages.html">Mesajlar</a>
+          </div>
+        </nav>
+        <div class="panel-user" data-panel-session>Oturum kontrol ediliyor</div>
+        <button class="panel-logout" type="button" data-logout>Çıkış Yap</button>
+      </aside>
+
+      <main class="panel-main">
+        <section class="panel-hero-card panel-view-hero">
+          <div>
+            <p class="eyebrow">Yönetici Paneli</p>
+            <h1>Menü Yönetimi</h1>
+            <p>Mevcut ürünleri düzenleyin veya yeni ürünü ayrı formdan ekleyin. Değişiklikler menüye dinamik yansır.</p>
+          </div>
+        </section>
+
+        <section class="panel-card menu-editor-panel" aria-labelledby="menu-editor-title">
+          <div class="panel-card-heading">
+            <div>
+              <p class="eyebrow">Mevcut Ürün</p>
+              <h2 id="menu-editor-title">Ürün ve Fiyat Güncelle</h2>
+            </div>
+            <span>Bu form sadece seçili ürünü düzenler</span>
+          </div>
+          <form class="menu-editor-form" id="menu-editor-form">
+            <label>
+              Kategori
+              <select id="editor-category" name="category"></select>
+            </label>
+            <label>
+              Düzenlenecek Ürün
+              <select id="editor-product" name="product"></select>
+            </label>
+            <label>
+              Ürün Adı
+              <input id="editor-name" name="name" type="text" required>
+            </label>
+            <label>
+              Fiyat (₺)
+              <input id="editor-price" name="price" type="number" min="0" step="1" required>
+            </label>
+            <label>
+              Kalori
+              <input id="editor-kcal" name="kcal" type="number" min="0" step="1" required>
+            </label>
+            <label class="editor-wide">
+              İçerik
+              <textarea id="editor-ingredients" name="ingredients" rows="3"></textarea>
+            </label>
+            <label class="editor-wide">
+              Alerjenler
+              <input id="editor-allergens" name="allergens" type="text" placeholder="Glüten, Süt">
+            </label>
+            <div class="editor-actions">
+              <button class="primary-button" type="submit">Ürünü Güncelle</button>
+            </div>
+          </form>
+          <div class="managed-products" id="managed-products"></div>
+        </section>
+
+        <section class="panel-card menu-editor-panel" aria-labelledby="new-product-title">
+          <div class="panel-card-heading">
+            <div>
+              <p class="eyebrow">Yeni Ürün</p>
+              <h2 id="new-product-title">Yeni Ürün Ekle</h2>
+            </div>
+            <span>Boş formdan girilen ürün menüye otomatik eklenir</span>
+          </div>
+          <form class="menu-editor-form" id="new-product-form">
+            <label>
+              Kategori
+              <select id="new-product-category" name="category"></select>
+            </label>
+            <label>
+              Ürün Adı
+              <input id="new-product-name" name="name" type="text" required placeholder="Yeni ürün adı">
+            </label>
+            <label>
+              Fiyat (₺)
+              <input id="new-product-price" name="price" type="number" min="0" step="1" required placeholder="0">
+            </label>
+            <label>
+              Kalori
+              <input id="new-product-kcal" name="kcal" type="number" min="0" step="1" required placeholder="0">
+            </label>
+            <label class="editor-wide">
+              İçerik
+              <textarea id="new-product-ingredients" name="ingredients" rows="3" placeholder="Malzemeler"></textarea>
+            </label>
+            <label class="editor-wide">
+              Alerjenler
+              <input id="new-product-allergens" name="allergens" type="text" placeholder="Glüten, Süt">
+            </label>
+            <div class="editor-actions">
+              <button class="primary-button" type="submit">Yeni Ürünü Menüye Ekle</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

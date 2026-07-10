@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yönetici Dashboard · Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="panel-body">
+    <div class="panel-shell" data-required-role="manager">
+      <aside class="panel-sidebar" aria-label="Yönetici menüsü">
+        <a class="panel-brand" href="manager-dashboard.html">
+          <img src="assets/stack-logo.png" alt="Stack Burger">
+          <strong>Stack Burger</strong>
+        </a>
+        <nav class="panel-menu" aria-label="Yönetici panel menüsü">
+          <div class="panel-nav-card">
+            <p>Yönetici Paneli</p>
+            <a class="panel-menu-item is-active" href="manager-dashboard.html">Dashboard</a>
+            <a class="panel-menu-item" href="manager-reports.html">Raporlar</a>
+            <a class="panel-menu-item" href="manager-menu.html">Menü Yönetimi</a>
+            <a class="panel-menu-item" href="manager-messages.html">Mesajlar</a>
+          </div>
+        </nav>
+        <div class="panel-user" data-panel-session>Oturum kontrol ediliyor</div>
+        <button class="panel-logout" type="button" data-logout>Çıkış Yap</button>
+      </aside>
+
+      <main class="panel-main">
+        <section class="panel-hero-card panel-view-hero">
+          <div>
+            <p class="eyebrow">Yönetici Paneli</p>
+            <h1>Yönetici Dashboard</h1>
+            <p>Bu sayfa sadece yönetici rapor özetlerini ve menü durumunu gösterir.</p>
+          </div>
+          <span class="panel-pill" id="report-updated">Güncel</span>
+        </section>
+        <div class="manager-grid">
+          <section class="panel-stat-card stat-panel">
+            <span>Günlük Ciro</span>
+            <strong id="daily-revenue">₺0</strong>
+            <small id="paid-order-count">0 kapatılan adisyon</small>
+          </section>
+          <section class="panel-stat-card stat-panel">
+            <span>En Güçlü Kategori</span>
+            <strong id="top-category">Henüz yok</strong>
+            <small id="top-category-revenue">₺0</small>
+          </section>
+          <section class="panel-stat-card stat-panel">
+            <span>Mutfak Arşivi</span>
+            <strong id="archive-count">0</strong>
+            <small>tamamlanan fiş</small>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

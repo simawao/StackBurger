@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mutfak Bildirimleri · Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="panel-body">
+    <div class="panel-shell" data-required-role="kitchen">
+      <aside class="panel-sidebar" aria-label="Mutfak menüsü">
+        <a class="panel-brand" href="kitchen-dashboard.html">
+          <img src="assets/stack-logo.png" alt="Stack Burger">
+          <strong>Stack Burger</strong>
+        </a>
+        <nav class="panel-menu" aria-label="Mutfak panel menüsü">
+          <div class="panel-nav-card">
+            <p>Mutfak Paneli</p>
+            <a class="panel-menu-item" href="kitchen-dashboard.html">Dashboard</a>
+            <a class="panel-menu-item is-active" href="kitchen-notifications.html">Bildirimler</a>
+            <a class="panel-menu-item" href="kitchen-orders.html">Aktif Siparişler</a>
+          </div>
+        </nav>
+        <div class="panel-user" data-panel-session>Oturum kontrol ediliyor</div>
+        <button class="panel-logout" type="button" data-logout>Çıkış Yap</button>
+      </aside>
+
+      <main class="panel-main">
+        <section class="panel-hero-card panel-view-hero">
+          <div>
+            <p class="eyebrow">Mutfak Paneli</p>
+            <h1>Sipariş Bildirimleri</h1>
+            <p>Müşteri siparişleri mutfağa düştüğünde bildirimler bu sayfada takip edilir.</p>
+          </div>
+        </section>
+        <section class="panel-card notification-panel" aria-labelledby="notification-title">
+          <div class="panel-card-heading">
+            <div>
+              <h2 id="notification-title">Bildirim Listesi</h2>
+              <p>Yeni sipariş uyarıları.</p>
+            </div>
+            <button class="ghost-button" id="clear-notifications-button">Bildirimleri Temizle</button>
+          </div>
+          <div class="notification-list" id="notification-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

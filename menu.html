@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menü · Stack Burger</title>
+    <link rel="icon" type="image/png" href="assets/stack-logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand-link" href="index.html">
+        <p class="eyebrow">Stack Burger</p>
+        <h1>Stack Burger</h1>
+      </a>
+      <nav class="role-nav" aria-label="Ana menü">
+        <a class="role-button" href="index.html">Ana Sayfa</a>
+        <a class="role-button is-active" href="menu.html">Menü</a>
+        <a class="role-button" href="order.html">Sipariş Oluştur</a>
+        <a class="role-button" href="order-status.html">Sipariş Takip</a>
+        <a class="role-button" href="about.html">Hakkımızda</a>
+        <a class="role-button" href="location.html">Konum</a>
+        <a class="role-button" href="contact.html">İletişim</a>
+        <a class="role-button login-nav-button" href="login.html">Giriş Yap</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel home-menu-panel menu-board-live page-section" aria-labelledby="live-menu-title">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Canlı Menü</p>
+            <h2 id="live-menu-title">Stack Burger Menüsü</h2>
+          </div>
+          <span>Bu liste yönetici panelindeki ürünlerden otomatik oluşur.</span>
+          <a class="primary-button home-action" href="order.html">Sipariş Oluştur</a>
+        </div>
+        <div class="home-menu-grid" id="home-menu-preview"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Stack Burger Menü</span>
+      <span>Fiyatlar yönetici panelinden canlı güncellenir.</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
